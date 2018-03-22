@@ -1,0 +1,23 @@
+<form>
+  <h2>Sign in</h2>
+  <label for="inputEmail">Email:</label>
+  <input
+    [(ngModel)]="user.username"
+    name="email" type="email" id="inputEmail" required autofocus>
+
+  <br>
+
+  <label for="inputPassword">Password:</label>
+  <input
+    [(ngModel)] = "user.password"
+    name="password" type="password" id="inputPassword" required>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox" value="remember-me"> Remember me
+    </label>
+  </div>
+
+  <button
+    (click)="validateLogin();"
+    type="button">Sign in</button>
+</form>
